@@ -20,4 +20,4 @@ let apiBlogApi = new TempApi.BlogApi();import TempApi from '../src/index';window
        } catch (e) { console.log(e) };
       }
     });
-    [...subDataElements].forEach((element,index) => {if(index > data.length) subDataElements[index].remove()})}});};document.getElementById('idmz4').onclick = () => {let blogId = window.location.pathname.replace('/Page3/','');apiBlogApi.deleteblog( blogId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');}});};
+    [...subDataElements].forEach((element,index) => {if(index > data.length) subDataElements[index].remove()})}});};document.getElementById('ibxt8').onclick = () => {let blogId = window.location.pathname.replace('/Page3/','');apiBlogApi.deleteblog( blogId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');}});};document.getElementById('idmz4').onclick = () => {let blogId = window.location.pathname.replace('/Page3/','');apiBlogApi.deleteblog( blogId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');}});};
