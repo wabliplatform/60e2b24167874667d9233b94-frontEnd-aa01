@@ -22,11 +22,12 @@ class Blog {
     /**
      * Constructs a new <code>Blog</code>.
      * @alias module:model/Blog
+     * @param title {String} 
      * @param stext {String} 
      */
-    constructor(stext) { 
+    constructor(title, stext) { 
         
-        Blog.initialize(this, stext);
+        Blog.initialize(this, title, stext);
     }
 
     /**
@@ -34,7 +35,8 @@ class Blog {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, stext) { 
+    static initialize(obj, title, stext) { 
+        obj['title'] = title;
         obj['stext'] = stext;
     }
 
@@ -52,6 +54,9 @@ class Blog {
             if (data.hasOwnProperty('_id')) {
                 obj['_id'] = ApiClient.convertToType(data['_id'], 'String');
             }
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
+            }
             if (data.hasOwnProperty('stext')) {
                 obj['stext'] = ApiClient.convertToType(data['stext'], 'String');
             }
@@ -66,6 +71,11 @@ class Blog {
  * @member {String} _id
  */
 Blog.prototype['_id'] = undefined;
+
+/**
+ * @member {String} title
+ */
+Blog.prototype['title'] = undefined;
 
 /**
  * @member {String} stext

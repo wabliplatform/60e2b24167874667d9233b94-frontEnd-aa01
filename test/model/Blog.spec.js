@@ -60,6 +60,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property title (base name: "title")', function() {
+      // uncomment below and update the code to test the property title
+      //var instance = new TempApi.Blog();
+      //expect(instance).to.be();
+    });
+
     it('should have the property stext (base name: "stext")', function() {
       // uncomment below and update the code to test the property stext
       //var instance = new TempApi.Blog();
